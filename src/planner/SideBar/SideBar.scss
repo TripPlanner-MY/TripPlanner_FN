@@ -1,0 +1,539 @@
+.sidebar {
+    width: 52.08vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    user-select: none;
+    border: none;
+    margin: none;
+    padding: none;
+
+    & > * {
+      border: 1px solid #d9d9d9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin: 1px;
+      padding: 5px;
+  }
+
+    .option{
+        width:5.2vw;
+        height: 100%;
+
+        .optionButton {
+          width: 4.16vw;
+          height: 4.16vw;
+          cursor: pointer;
+          margin: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: .7rem;
+          transition: font-size 0.3s ease, background-color 0.3s ease;  // 애니메이션 추가
+          color: gray;
+        
+          &:active {
+            color: black;  // 텍스트 색상 변경
+            font-size: 1rem;  // 글자 크기 커짐
+            font-weight: bold;
+          }
+
+          .sidebar-logo {
+            width: 4.16vw;
+            height: 4.16vw;
+            object-fit: contain;
+          }
+        }
+    }
+    .content{
+        width:26.04vw;
+        height: 100%;
+        
+        p {
+          text-align: center;
+        }
+
+        .delete-destination-btn {
+          color: white;
+          background-color: #ff4d4f;
+          border: none;
+          border-radius: 4px;
+          padding: 8px 16px;
+          font-size: 0.9rem;
+          cursor: pointer;
+          float: right;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      
+          &:hover {
+              background-color: #ff7875;
+          }
+      
+          &:active {
+              background-color: #d9363e;
+          }
+      }
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: baseline;
+        height: auto;
+        text-align: center;
+        padding: 30px 40px;
+        background-color: #f4f6f7;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        
+        label {
+          font-size: 1.1rem;
+          margin-bottom: 10px;
+          color: #333;
+        }
+      
+        input {
+          padding: 10px 15px;
+          font-size: 1rem;
+          border: 1px solid #d3cbed;
+          border-radius: 5px;
+          margin-bottom: 15px;
+          width: 100%;
+          box-sizing: border-box;
+          transition: border-color 0.3s ease-in-out;
+      
+          &:focus {
+            border-color: #d3cbed;
+            outline: none;
+          }
+        }
+      
+        .share-check {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+        
+          label {
+            font-size: 0.8rem;
+            margin-right: 10px;
+            color: #DB4455;
+          }
+        
+          input {
+            display: none;
+          }
+        
+          .check-label {
+            display: flex;
+            width: 20px;
+            height: 20px;
+            border: 1.5px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+          }
+        
+          input:checked + .check-label {
+            background-color: black;
+            border-color: black;
+          }
+        
+          input:checked + .check-label::after {
+            content: '✔';
+            color: white;
+            font-size: 14px;
+          }
+        
+          .check-label:hover {
+            border-color: black;
+          }
+
+          .check-label:active {
+            transform: scale(0.98);
+          }
+        }
+        
+      
+        .btn-div {
+          display: flex;
+          justify-content: flex-end;
+          width: 100%;
+        
+          button {
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            color: white;
+            background-color: #a2d2ff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        
+            &:hover {
+              background-color: #bde0fe;
+              transform: scale(1.05);
+            }
+        
+            &:active {
+              background-color: #bde0fe;
+              transform: scale(0.98);
+            }
+          }
+        } 
+      }
+        .date {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+
+        .content-planner {
+          display:flex;
+          flex-direction: column;
+          
+          
+          .plannerMenu {
+            margin-bottom: 10px;
+          }
+
+          .plannerList {
+              display: flex;
+              justify-content: stretch;
+              align-items: start;
+      
+              .content-side {
+                  width: 5.20vw;
+                  height: 100%;
+                  max-height: 39.06vw;
+                  overflow-y: auto;
+                  padding-right: 10px;
+                  margin-right: 10px;
+                  scrollbar-width: none;
+
+                  .optionButton {
+                      width: 4.16vw;
+                      height: 4.16vw;
+                      cursor: pointer;
+                      margin: 10px 0px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 0.9rem;
+                      transition: font-size 0.3s ease, background-color 0.3s ease; 
+                      color: gray;
+      
+                      &:active {
+                          color: black;
+                          font-size: 1.2rem;
+                      }
+                  }
+              }
+      
+              .content-body {
+                  width: 26.04vw;
+                  height: 100%;
+                  max-height: 39.06vw;
+                  overflow-y: auto;
+                  padding-right: 10px;
+                  scrollbar-width: none;
+      
+                  .content-card {
+                      height: 13.88vh;
+                      display: flex;
+                      flex-direction: row;
+                      background-color: #fff;
+                      border-radius: 8px;
+                      border: 1px solid #ddd;
+                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                      margin-bottom: 15px;
+                      padding: 20px;
+                      cursor: pointer;
+                  }
+      
+                  .card-image {
+                      width: 5.2vw;
+                      height: 9.25vh;
+                      margin-right: 15px;
+                      img {
+                          width: 100px;
+                          height: 100px;
+                          object-fit: cover;
+                          border-radius: 4px;
+                      }
+                  }
+    
+                  .card-content {
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: flex-start;
+                      flex-grow: 1;
+                  }
+      
+                  .card-header {
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: flex-start;
+                      margin-bottom: 10px;
+
+                      .card-button {
+                        display: flex;
+                        justify-content: end;
+                      }
+                  }
+      
+                  .card-name {
+                      font-size: 16px;
+                      font-weight: bold;
+                      color: #333;
+                      margin-bottom: 5px;
+                  }
+      
+                  .card-category {
+                      font-size: 13px;
+                      color: #888;
+                      margin-bottom: 5px;
+                  }
+      
+                  .card-addr {
+                      font-size: 13px;
+                      color: #555;
+                      margin-bottom: 10px;
+                  }
+      
+                  button {
+                      align-self: flex-start;
+                      padding: 8px 12px;
+                      font-size: 13px;
+                      color: #fff;
+                      background-color: #e53e3e;
+                      border: none;
+                      border-radius: 4px;
+                      cursor: pointer;
+                      transition: background-color 0.3s ease;
+      
+                      &:hover {
+                          background-color: #c53030;
+                      }
+      
+                      &:disabled {
+                          background-color: #ddd;
+                          cursor: not-allowed;
+                      }
+                  }
+      
+                  .card-desc {
+                      font-size: 12px;
+                      color: #666;
+                      margin-bottom: 15px;
+                  }
+              }
+          }
+      }
+        
+    }
+    .question{
+        width:20.83vw;
+        height: 100%;
+        position: relative;
+
+        p {
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        .total-page {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+        }
+
+        .question-search {
+          input {
+              padding: 10px 20px;
+              font-size: 1rem;
+              cursor: pointer;
+              width: 80%;
+              box-sizing: border-box;
+              border: 0.1px solid #d3cbed;
+              border-radius: 5px;
+              margin-bottom: 10px;
+
+              &.invalid {
+                  border: 1px solid #d3cbed;
+              }
+          }
+
+          button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #a2d2ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+
+            &:hover {
+              background-color: #bde0fe;
+            }
+        
+            &.active {
+              background-color: #bde0fe;
+              color: white;
+            }
+          }
+        }
+
+        .search-body {
+          max-height: 33.85vw;
+          overflow-y: auto;
+          padding-right: 10px;
+          scrollbar-width: none;
+
+          .search-card {
+            height: 13.88vh;
+            display: flex;
+            flex-direction: row;
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            padding: 20px;
+            cursor: pointer;
+        
+            .card-image {
+              width: 5.20vw;
+              height: 9.25vh;
+              margin-right: 15px;
+        
+              img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 4px;
+              }
+            }
+        
+              .card-header {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-bottom: 10px;
+
+                .card-body {
+                  display:flex;
+                  flex-direction: column;
+                  align-items: center;
+                }
+              }
+        
+              .card-name {
+                font-size: 15px;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 5px;
+              }
+        
+              .card-category {
+                font-size: 12px;
+                color: #888;
+                margin-bottom: 5px;
+              }
+        
+              .card-addr {
+                font-size: 12px;
+                color: #555;
+                margin-bottom: 10px;
+              }
+        
+              .card-desc {
+                font-size: 10px;
+                color: #666;
+                margin-bottom: 15px;
+              }
+        
+              button {
+                width: 2.6vw;
+                height: 100%;
+                align-self: flex-start;
+                padding: 8px 12px;
+                font-size: 14px;
+                color: #a4a4a4;
+                background-color: #f4f6f7;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 30px;
+              }
+          }
+        }
+
+        .pagination {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          position:absolute;
+          bottom: 10px;
+        
+          button {
+            padding: 6px 12px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            background-color: transparent;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            transition: transform 0.2s ease;
+        
+            &:hover {
+              transform: scale(1.05);
+            }
+        
+            &.active {
+              font-weight: bold;
+              background-color: #f0f0f0;
+            }
+        
+            &:active {
+              background-color: #f0f0f0;
+            }
+        
+            &:disabled {
+              color: #ccc;
+              cursor: not-allowed;
+            }
+          }
+        }
+    }
+    .search-btns {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 3px 10px;
+    
+      .search-btn {
+        margin: 3px 10px;
+        padding: 8px 16px;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: transparent;
+        color: #333;
+        border: none;
+        
+        &:hover {
+          background-color: transparent;
+        }
+        &.active {
+          background-color: #d3d3d3;
+        }
+      }
+    }
+}
+

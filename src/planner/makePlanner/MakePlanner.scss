@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+  }  
+
+.planner {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: stretch;
+}
+
+.plannerSide {
+    height: 100vh;
+}
+
+.plannerBody {
+    height: 100vh;
+}

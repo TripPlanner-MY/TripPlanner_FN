@@ -1,0 +1,161 @@
+// 서브 메뉴
+.destinationDetails-depth {
+    padding: 10px;
+    display: block;
+    width: 100px;
+    margin: 0 15px 0 15px;
+
+    .day-button {
+        width: 80px;
+        height: 60px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li:hover {
+        cursor: pointer;
+    }
+}
+
+.destination-card {
+    padding: 0 20px;
+    margin-bottom: 20px;
+
+    // Day 섹션 스타일
+    .destination-day {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #333;
+        display: flex;
+        align-items: center;
+    }
+
+    // 거리 표시 블럭
+    .destination-distance {
+        height: 30px;
+        margin-left: 30px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+
+        .destination-distance-span {
+            margin-bottom: 16px;
+            height: 100%;
+            line-height: 30px;
+            padding-right: 10px;
+        }
+
+
+        .destination-distance-button {
+            margin-bottom: 16px;
+            border: 0;
+            height: 20px;
+
+            .icon {
+                width: 20px;
+                height: 20px;
+                background-color: #f9f9f9;
+
+            }
+
+        }
+    }
+}
+
+.destination-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    // border: 1px solid #ddd;
+    // border-radius: 8px;
+    padding: 10px 10px 10px 0;
+    background-color: #fff;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .destination-dayOrder {
+        width: 40px;
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-align: center;
+        color: #555;
+
+
+    }
+
+    .destination-image img {
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+        object-fit: cover;
+        margin-right: 10px;
+    }
+
+    .destination-desc {
+        flex: 1;
+        font-size: 2rem;
+
+        .destination-category {
+            // font-size: 1.2rem;
+            // color: #777;
+            height: 100%;
+            border: 0px;
+
+            color: #FFFFFF;
+            background: #FFFFFF;
+            /* 버튼 배경색을 header-wrapper와 동일하게 설정 */
+            border-radius: 15px;
+            /* 버튼에 둥근 모서리 추가 */
+            font-size: 1.2rem;
+
+            /* 네온 효과 */
+            text-shadow:
+                0 0 5px #2317FF,
+                0 0 10px #2317FF,
+                // 0 0 15px #FF8000,
+                0 0 35px #FFFFFF;
+
+            transition: text-shadow 0.3s ease;
+            /* 호버 효과를 위한 트랜지션 */
+        }
+
+        .destination-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .destination-address {
+            font-size: 1.4rem;
+            color: #555;
+            cursor: pointer;
+        }
+    }
+}
+
+// 맵 스타일
+.destination-map {
+    width: 70%;
+    height: 100vh;
+}
+
+
+.line {
+    width: 2px;
+    height: 121px;
+    background: #ddd;
+    position: absolute;
+    left: 19px;
+    bottom: 72px;
+    z-index: 100;
+
+}

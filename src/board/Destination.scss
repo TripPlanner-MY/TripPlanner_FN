@@ -1,0 +1,354 @@
+//게시판 제사히 보기 페이지 전체
+.destination-wrapper {
+    display: flex;
+    max-height: 100vh;
+}
+
+.destination-content {
+    width: 500px;
+    overflow-y: auto;
+    // padding: 20px;
+    background-color: #f9f9f9; // 카드 배경색
+}
+
+
+.destination-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.destination-content::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+}
+
+.destination-content::-webkit-scrollbar-track {
+    background-color: #c0b6b6;
+    border-radius: 10px;
+}
+
+// 메뉴
+.destinaion-depth {
+    padding: 10px;
+    display: block;
+    width: 100px;
+
+
+    li {
+        width: 80px;
+        height: 70px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+
+    }
+
+    li:hover {
+        cursor: pointer;
+    }
+}
+
+// 설명 부분
+.destination-topcard {
+    padding: 15px;
+
+    background: #D3CCE3;
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+
+
+
+    .topcard-header {
+
+        // display: flex;
+        // align-items: center;
+        // gap: 40px;
+
+        .topcard-title {
+
+            font-weight: 700;
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .topcard-subheader {
+
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 30px;
+            margin-bottom: 5px;
+
+
+            // 기간 문구
+            .topcard-day {
+                position: absolute;
+                right: 16%;
+            }
+
+            // 공개 or 비공개 문구
+            .topcard-isPublic {
+
+                position: absolute;
+                right: 5px;
+                line-height: 20px;
+                border: 1px solid #888;
+                height: 22px;
+                padding: 0 8px;
+                border-radius: 50px;
+                font-size: 1.3rem;
+                letter-spacing: -0.5px;
+            }
+        }
+
+    }
+
+    .topcard-main {
+        width: 100%;
+        min-height: 80px;
+        border-radius: 25px;
+        padding: 10px;
+        background-color: white;
+
+        .topcard-main-desc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .topcard-footer {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        position: relative;
+
+        // 좋아요
+        .like-section {
+            display: inline-block;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 25px;
+        }
+
+        .like-icon {
+            border-radius: 25px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .like-icon.liked {
+            filter: brightness(1.5);
+            transform: scale(1.2);
+            /* 확대 효과 */
+        }
+
+        .like-number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: black;
+            font-weight: bold;
+            font-size: 1.5rem;
+            width: 50%;
+            height: 40px;
+        }
+
+        .topcard-footer-createAt {
+            position: absolute;
+            right: 5px;
+        }
+
+    }
+}
+
+.destination-user {
+    margin: 20px 20px 0 20px;
+    // display: flex;
+    // align-items: center;
+
+    .destinaion-user-info {
+
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+
+        .topcard-userProfileImg {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .destination-username {
+            padding: 0 10px;
+            font-size: 2rem;
+
+        }
+    }
+
+    .destination-plannerControl {
+        display: flex;
+        justify-content: right;
+        flex-grow: 1;
+
+        .destination-plannerControl-button {
+            border: 0;
+            border-radius: 25px;
+            padding: 5px;
+            margin: 0 5px;
+
+        }
+
+
+
+    }
+
+}
+
+.destination-card {
+    padding: 0 20px;
+    margin-bottom: 20px;
+
+    // Day 섹션 스타일
+    .destination-day {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #333;
+        display: flex;
+        align-items: center;
+    }
+
+    // 거리 표시 블럭
+    .destination-distance {
+        height: 30px;
+        margin-left: 30px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+
+        .destination-distance-span {
+            margin-bottom: 16px;
+            height: 100%;
+            line-height: 30px;
+            padding-right: 10px;
+        }
+
+
+        .destination-distance-button {
+            margin-bottom: 16px;
+            border: 0;
+            height: 20px;
+
+            .icon {
+                width: 20px;
+                height: 20px;
+                background-color: #f9f9f9;
+
+            }
+
+        }
+    }
+}
+
+.destination-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    // border: 1px solid #ddd;
+    // border-radius: 8px;
+    padding: 10px 10px 10px 0;
+    background-color: #fff;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .destination-dayOrder {
+        width: 40px;
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-align: center;
+        color: #555;
+
+
+    }
+
+    .destination-image img {
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+        object-fit: cover;
+        margin-right: 10px;
+    }
+
+    .destination-desc {
+        flex: 1;
+        font-size: 2rem;
+
+        .destination-category {
+            // font-size: 1.2rem;
+            // color: #777;
+            height: 100%;
+            border: 0px;
+
+            color: #FFFFFF;
+            background: #FFFFFF;
+            /* 버튼 배경색을 header-wrapper와 동일하게 설정 */
+            border-radius: 15px;
+            /* 버튼에 둥근 모서리 추가 */
+            font-size: 1.2rem;
+
+            /* 네온 효과 */
+            text-shadow:
+                0 0 5px #2317FF,
+                0 0 10px #2317FF,
+                // 0 0 15px #FF8000,
+                0 0 35px #FFFFFF;
+
+            transition: text-shadow 0.3s ease;
+            /* 호버 효과를 위한 트랜지션 */
+        }
+
+        .destination-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .destination-address {
+            font-size: 1.4rem;
+            color: #555;
+            cursor: pointer;
+        }
+    }
+}
+
+// 맵 스타일
+.destination-map {
+    width: 70%;
+    height: 100vh;
+}
+
+
+.line {
+    width: 2px;
+    height: 121px;
+    background: #ddd;
+    position: absolute;
+    left: 19px;
+    bottom: 72px;
+    z-index: 100;
+
+}

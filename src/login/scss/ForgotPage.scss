@@ -1,0 +1,47 @@
+.forgot-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+  
+    // 페이지 전체를 위로 200px 이동
+    transform: translateY(-100px); // 200px 위로 이동
+    transition: transform 0.3s ease;
+  
+    .forgot-title {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 40px;
+      position: relative;
+      top: -10px; // 제목을 약간 더 위로 이동
+    }
+  
+    .forgot-options {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  
+      .forgot-button {
+        width: 300px;
+        padding: 15px;
+        font-size: 18px;
+        color: #fff;
+        background-color: #6c63ff;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: bold;
+  
+        &:hover {
+          background-color: #4f46e5;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+  

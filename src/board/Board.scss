@@ -1,0 +1,130 @@
+.board {
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
+}
+
+/* 전체 게시판 감싸는 스타일 */
+.board-wrapper {
+    width: 100%;
+    /* 최대 너비를 1200px로 제한 */
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+/* 게시판 제목 */
+.board-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+// 플래너 전체 
+.planner-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* 개별 플래너 항목 */
+.planner-item {
+
+    margin: 10px;
+
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* 호버시 카드 효과 */
+.planner-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 썸네일 이미지 스타일 */
+.planner-thumbnail img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.planner-info {
+    padding: 0 15px 15px 15px;
+
+}
+
+/* 플래너 제목 스타일 */
+.planner-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* 플래너 작성자 정보 스타일 */
+.planner-username {
+    font-size: 1rem;
+    color: #777;
+    margin: 5px 0;
+}
+
+/* 플래너 기간 스타일 */
+.planner-duration {
+    font-size: 1rem;
+    color: #777;
+    margin: 5px 0;
+}
+
+/* 작성일 스타일 */
+.planner-created-at {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* 작은 화면에 적응하는 반응형 스타일 */
+// @media (max-width: 768px) {
+//     .planner-item {
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     .planner-thumbnail img {
+//         margin-bottom: 10px;
+//     }
+
+//     .board-wrapper {
+//         padding: 10px;
+//     }
+// }
+// 페이지네이션 버튼들 
+.board-pagination {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.board-pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.board-pagination button:hover {
+    background-color: #76c7db;
+    color: white;
+}
+
+.board-pagination button.active {
+    background-color: #76c7db;
+    color: white;
+    border-color: #76c7db;
+}

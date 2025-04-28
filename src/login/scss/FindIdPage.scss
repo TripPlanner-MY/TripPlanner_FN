@@ -1,0 +1,90 @@
+.find-id-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transform: translateY(-100px);
+    transition: transform 0.3s ease;
+    position: relative;
+  
+    .find-id-title {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .find-id-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 300px;
+  
+      label {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 5px;
+      }
+  
+      input {
+        padding: 15px;
+        font-size: 18px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+  
+      .find-id-button {
+        width: 300px;
+        padding: 15px;
+        font-size: 18px;
+        color: #fff;
+        background-color: #6c63ff;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: bold;
+  
+        &:hover {
+          background-color: #4f46e5;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  
+    .find-id-message {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+  
+    .find-id-table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 300px;
+  
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+  
+      th {
+        background-color: #6c63ff;
+        color: #fff;
+      }
+  
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+  
+      tr:hover {
+        background-color: #f0f8ff;
+      }
+    }
+  }
+  

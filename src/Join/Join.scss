@@ -1,0 +1,227 @@
+.all{
+
+    margin-top: 100px;
+
+    width: 100%;
+    height: 100%;
+
+    place-items: center; // 가로와 세로 중앙정렬
+   position: relative;
+
+    border: 1px solid blue;
+    
+
+    form{
+
+        
+        border: 1px solid rgb(21, 195, 29);
+        place-items: center;
+
+         // 유효성 메세지 색깔 체크
+         .validation-message {
+            font-size: 0.9rem;
+            margin-top: 5px;
+            // border: 1px solid black;
+            z-index: 0;
+            
+            &.validation-success {
+                color: green; /* 초록색 */
+                font-size: 0.9rem;
+            }
+            
+            &.validation-error {
+                color: red; /* 빨간색 */
+                font-size: 0.9rem;
+            }
+        }
+
+        //오류 메세지
+        div{
+            width: 400px;
+            height: 25px;
+            // border: 1px solid rgb(255, 192, 237);
+        }
+
+        button {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+       
+        
+
+
+        // div 드래그 앤 드랍 원
+        .image-preview-container {
+            position: relative;
+            margin: 10px auto;
+            border: 2px dashed #ccc;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+    
+    
+            // 이미지 미리보기기
+            .circle-preview {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+                position: absolute;
+                // background-color: red;
+                display: flex; // 플렉스 레이아웃 적용
+                justify-content: center; // 가로 정렬
+                
+            
+                
+            }
+        }
+        
+
+        // 이미지 버튼
+        #imgbutton{
+            justify-content: center;
+            align-items: center;
+            width: 900px;
+            height: 50px;
+            // border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+            #imgupload{
+                width: 100px;
+            }
+
+            #imgcancel{
+                width: 100px;
+            }
+        }
+        
+
+        .emailbox {
+            display: flex;
+            flex-direction: column; // 수직 배치
+            align-items: flex-start;
+            width: 416px;
+            // border: 1px solid red;
+            margin-bottom: 0; // 기본적으로 margin-bottom 없음
+        
+            &.has-message {
+                margin-bottom: 35px; // 유효성 메시지가 있을 경우 추가 간격
+            }
+
+            &.name-message{
+                margin-top: 10px;
+            }
+        
+            .email-wrapper {
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: 100%;
+        
+                input {
+                    flex: 1;
+                    padding-right: 150px; // 인증 코드 버튼 공간
+                }
+        
+                .emailbutton {
+                    position: absolute;
+                    right: 10px;
+                    padding: 2px 5px;
+                    font-size: 0.8rem;
+                    background-color: #f8f9fa;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+        
+                    &:hover {
+                        background-color: #e9ecef;
+                    }
+                }
+            }
+        }
+        
+
+
+
+        .auth-codebox {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 416px;
+            margin-top: 10px;
+
+            &.auth-message{
+                margin-bottom: 30px;
+            }
+        
+            .auth-code-wrapper {
+                // position: relative; // 인증 버튼과 타이머 위치를 조정하기 위해 relative 추가
+                display: flex;
+                align-items: center;
+                width: 100%;
+                border: 1px solid blue;
+                // margin-bottom: 50px ;
+        
+                .auth-code {
+                    flex: 1;
+                    padding-right: 150px; // 인증 버튼 공간 확보
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 0.9rem;
+                    width: 100%;
+                    border: 1px solid red;
+                    position: relative;
+                    // margin-bottom:  0px;
+                }
+        
+                #timer {
+                    position: absolute;
+                    right: -250px; // 버튼과 간격 조정
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 0.9rem;
+                    color: #333;
+                }
+        
+                .verifybutton {
+                    position: absolute;
+                    right: 10px; // 입력 필드 오른쪽에 버튼 배치
+                    // top: 50%;
+                    // transform: translateY(-50%);
+                    padding: 5px 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    background-color: #f8f9fa;
+                    cursor: pointer;
+                    font-size: 0.8rem;
+                    transition: background-color 0.3s;
+        
+                    &:hover {
+                        background-color: #e9ecef;
+                    }
+                }
+            }
+        }
+        
+  
+        
+        input {
+            &[type="text"],
+            &[type="email"],
+            &[type="password"] {
+                display: block;
+                margin: 10px 0;
+                width: 400px;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+
+            }
+        }
+
+    }
+}

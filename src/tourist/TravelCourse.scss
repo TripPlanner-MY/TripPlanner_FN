@@ -1,0 +1,233 @@
+/* 전체 래퍼 스타일 */
+.tourist-wrapper {
+    background-color: #f9f9f9;
+}
+
+.tourist-content {
+
+    max-width: 1200px;
+    /* 최대 너비를 1200px로 제한 */
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+/* 제목 스타일 */
+.tourist-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+// 검색에 대한 내용
+.tourist-header {
+    position: relative;
+
+    .search-input {
+        position: absolute;
+        right: 70px;
+    }
+
+    .search-button {
+        position: absolute;
+        right: 10px;
+
+    }
+
+    /* 필터 섹션 스타일 */
+    .filter-select,
+    .search-input,
+    .search-button {
+        padding: 10px;
+        margin: 5px;
+        font-size: 1.2rem;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+    }
+}
+
+
+.filter-select {
+    width: 150px;
+}
+
+.search-input {
+    width: 300px;
+}
+
+.search-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* 총 코스 수와 정렬 선택 박스 */
+.total-check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+
+    .total-count {
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    .sort-select {
+        width: 180px;
+        border-radius: 15px;
+    }
+
+}
+
+
+/* 여행 코스 리스트 내용 */
+.travel-course-list-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5개의 열로 구성 */
+    gap: 10px;
+    /* 그리드 간의 간격 */
+}
+
+/* 여행 코스 리스트 스타일 */
+.travel-course-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 313px;
+    max-width: 250px;
+    /* 각 아이템의 최대 너비 */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // 애니메이션 (hover시 연계)
+    position: relative;
+    flex-shrink: 0;
+    /* 이미지가 넘칠 때 숨기기 */
+}
+
+
+/* 여행 코스 리스트에 마우스 hover시 애니메이션 */
+.travel-course-list:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* 이미지 스타일 */
+.travel-course-list__img {
+    width: 100%;
+    height: 180px;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* 제목 스타일 */
+.course-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    white-space: normal;
+    /* 줄바꿈 허용 */
+    word-wrap: break-word;
+    /* 단어가 길어져도 줄바꿈 처리 */
+    margin-bottom: 15px;
+}
+
+/* 지역, 해시태그 텍스트 스타일 */
+.course-region,
+.course-hashtag {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+    /* p 태그의 기본 margin 제거 */
+}
+
+// p태그들이 있는 박스 (지역, 코스 태그)
+.course-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    height: 100%;
+    width: 100%;
+
+    // 지역 p 태그 스타일
+    .course-region {
+        margin-top: 10px;
+        /* 제목과의 간격 */
+        font-weight: bold;
+    }
+
+    // 해시태그 p 태그 스타일
+    .course-hashtag {
+        margin-top: 5px;
+        /* 지역 p 태그와의 간격 */
+    }
+}
+
+
+
+// 페이지네이션 버튼들 
+.tourist-pagination {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.tourist-pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tourist-pagination button:hover {
+    background-color: #76c7db;
+    color: white;
+}
+
+.tourist-pagination button.active {
+    background-color: #76c7db;
+    color: white;
+    border-color: #76c7db;
+}
+
+/* 로딩 중 상태 */
+.loading-message {
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+
+    margin: 0 auto;
+    font-size: 3rem;
+    margin-top: 200px;
+    color: #666;
+}
+
+/* 결과가 없을 때 */
+.no-results {
+    text-align: center;
+    font-size: 1.7rem;
+    color: #666;
+}

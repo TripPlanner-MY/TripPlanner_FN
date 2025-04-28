@@ -1,0 +1,172 @@
+// 부트스트랩5 툴팁 커스텀
+/* 툴팁 내부 배경색과 글씨 색을 변경 */
+.tooltip-inner {
+    background: #6441A5;
+    background: -webkit-linear-gradient(to right, #2a0845, #6441A5);
+    background: linear-gradient(to right, #2a0845, #6441A5);
+
+    color: white !important;
+}
+
+/* 툴팁 화살표 색을 변경 */
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: #6441A5 !important;
+    /* 상단 화살표 색 (오렌지색) */
+}
+
+.tooltip.bs-tooltip-right .tooltip-arrow::before {
+    border-right-color: #6441A5 !important;
+    /* 오른쪽 화살표 색 */
+}
+
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: #6441A5 !important;
+    /* 하단 화살표 색 */
+}
+
+.tooltip.bs-tooltip-left .tooltip-arrow::before {
+    border-left-color: #6441A5 !important;
+    /* 왼쪽 화살표 색 */
+}
+
+
+// 스와이퍼
+.mySwiper {
+    height: 600px;
+
+    img {
+        height: 100%;
+        margin: 0;
+    }
+
+}
+
+
+// 관광지 자세히 보기 페이지 전체
+.touristInfo-wrapper {
+    width: 52.083vw;
+    min-width: 1000px;
+    margin: 0 auto;
+
+}
+
+// 설명이 있는 부분
+.desc-content {
+    width: 100%;
+    margin: 0 auto;
+
+    border-bottom: 1px solid #ccc;
+
+    // 링크 태그가 있는 구역
+    .desc__link-container {
+        display: inline-block;
+    }
+
+    // 관광지 이름
+    .desc__title {
+
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    // 주소
+    .desc__address-container {
+        margin: 20px;
+        text-align: center;
+    }
+
+    // 홈페이지 링크
+    .desc__homepage {
+        margin-bottom: 20px;
+
+        // 즐겨찾기 아이콘 
+        .favIcon {
+            width: 30px;
+            height: 30px;
+            margin: 0 15px;
+        }
+
+        .favIcon:hover {
+            cursor: pointer;
+        }
+
+        .tohomepage-btn {
+            display: inline-block;
+            height:30px;
+            width: 30px;
+            // 홈페이지 아이콘
+            .homepageIcon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+}
+
+// 이미지가 있는 블럭
+.image-block {
+    width: 100%;
+
+    img {
+        width: 100%;
+        margin: 40px 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+// 개요 컨탠트
+.overview-content {
+    width: 100%;
+
+    // 상세정보 제목
+    .overview__title {
+        border-bottom: 2px solid #666;
+        padding: 10px;
+    }
+
+    // 본문 p태그
+    .overview-detail {
+        margin: 40px 0;
+        font-size: 18px;
+    }
+
+
+}
+
+// 지도 밑 상세정보들 컨탠트
+.detail-content {
+    width: 100%;
+    display: flex;
+
+    .detailInfo-ul {
+        width: 50%;
+        margin-bottom: 100px;
+    }
+
+    // 리스트들
+    .detail_items {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        .detail_items-title {
+            /* strong의 크기가 줄어들지 않도록 설정 */
+            flex-shrink: 0;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        .detail_items-text {
+            /* span이 남은 공간을 차지하도록 설정 */
+            flex-grow: 1;
+            /* strong과 동일한 line-height로 설정 */
+            line-height: 1.5;
+            /* 긴 텍스트를 잘라서 보여줌 */
+            word-break: break-word;
+            padding: 0 2px;
+        }
+    }
+
+}

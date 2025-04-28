@@ -1,0 +1,210 @@
+.planner-date-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  height: auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f6f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .area {
+    width: 100%;
+    margin-bottom: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+    
+    h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+  
+    select {
+      width: 90%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #d3cbed;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      background-color: #f8f9fa;
+      transition: border-color 0.3s ease;
+  
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  
+  .areaBtn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  
+    button {
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      background-color: #a2d2ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      
+      &:hover {
+        background-color: #bde0fe;
+        transform: scale(1.05);
+      }
+  
+      &:active {
+        background-color: #bde0fe;
+        transform: scale(0.98);
+      }
+    }
+  }
+
+  .calendar-box {
+    width: 100%;
+    margin-bottom: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+    
+    input {
+      width: 90%;
+      padding: 10px;
+      font-size: 1.1rem;
+      border: 1px solid #d3cbed;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      background-color: #f8f9fa;
+      transition: border-color 0.3s ease;
+      
+      &:focus {
+        border-color: #4f46e5;
+        outline: none;
+      }
+  
+      &::placeholder {
+        color: #888;
+        font-style: italic;
+      }
+    }
+  }
+
+  .calendar-popup-content {
+    // margin: 0;
+    padding: 0;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rdrCalendarWrapper.rdrDateRangeWrapper{
+    width: 80vw;
+    height: 80vh;
+  }
+  
+  // 달력 크기
+  .rdrMonth{
+    width: 50%;
+    height: 200%;
+  }
+  
+  //날짜(일) 크기
+  .rdrDays{
+    height: 80%;
+  }
+
+  
+  .calendar-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    max-width: fit-content;
+    z-index: 1001;
+  }
+  
+  .calendar-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .confirm-button {
+    margin: 0;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 10px; /* 캘린더 아래쪽에 배치 */
+    right: 10px; /* 오른쪽에 배치 */
+    padding: 10px 20px;
+    background-color: #a2d2ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    
+  }
+  
+  .confirm-button:hover {
+    background-color: #bde0fe; /* 버튼 hover 색상 */
+  }
+  
+  /* 추가된 스타일 */
+  .rdrStaticRanges,
+  .rdrInputRanges {
+    display: none !important; /* 공간을 완전히 숨김 */
+    z-index: 1001;
+    
+  }
+  
+  .rdrSidebarWrapper {
+    display: none !important; /* 사이드바 전체 제거 */
+  }
+  
+  .rdrMonth {
+    padding: 0 !important; /* 달력 내부 여백 제거 */
+    // background-color: red;  
+  }
+  
+  .rdrCalendarWrapper {
+    margin: 0 !important; /* 전체 여백 제거 */
+    padding: 0 !important;
+    position: relative; /* 버튼을 내부에서 정렬 가능하게 설정 */
+   
+  }
+  
+  .rdrDefinedRangesWrapper{
+    display: none;
+  }
+}
+
+
+  
