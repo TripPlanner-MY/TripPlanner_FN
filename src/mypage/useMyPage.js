@@ -91,7 +91,7 @@ const useMyPage = () => {
             ...prev,
             profileImage: `/upload/profile/${file.name}`, // 업로드된 이미지 URL을 formData에 설정
           }));
-          console.log("이미지 업로드 성공");
+ 
         } else {
           console.error("이미지 업로드 실패:", response.data);
         }

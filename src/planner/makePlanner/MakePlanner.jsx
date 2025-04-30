@@ -43,10 +43,6 @@ const MakePlanner = ({cookie}) => {
     const handleClickPlanner = (data) => {setDestination(data);}
     const handleClickSearch = (data) => {setSearchDestination(data);}
 
-    // useEffect(()=>{
-    //     console.log('plannerData : ', plannerData)
-    // },[plannerData])
-
     return (
         <div className='planner' >
             <div className='plannerSide' >

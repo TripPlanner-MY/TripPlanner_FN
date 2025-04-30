@@ -118,7 +118,7 @@ const SideBar = (props) => {
           setSearch(updatedSearch || []);
         })
         .catch((err) => {
-          console.log(err);
+
         });
     } else {
       axios
@@ -203,7 +203,7 @@ const SideBar = (props) => {
               navigate('/');
             })
             .catch((err) => {
-              console.log(err);
+
               alert('플래너를 작성하지 못했습니다.');
             });
         } else {
@@ -225,7 +225,7 @@ const SideBar = (props) => {
             navigate('/planner/board');
           })
           .catch((err) => {
-            console.log(err);
+   
             alert('플래너를 수정하지 못했습니다.');
           });
         }
@@ -461,7 +461,7 @@ const SideBar = (props) => {
             <div className="search-body">
               <ul>
                 { search && search.length > 0 && typeState=='관광지' && currentResults.map((el, index) => {
-                  console.log('image안나오는거보기',el);
+    
                   return (
                     <li key={index}
                       className="search-card"

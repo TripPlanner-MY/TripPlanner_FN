@@ -66,12 +66,12 @@ const Destination = () => {
                 withCredentials: true, // 쿠키 포함
             })
                 .then(response => {
-                    console.log(response)
+           
                     setLoginStatus(response.data);
                 })
                 .catch(error => {
                     setLoginStatus(error);
-                    console.log('로그인 정보 없음')
+    
                 })
         }
 
@@ -169,7 +169,7 @@ const Destination = () => {
 
             map.setBounds(bounds);
         }
-        console.log('destinations : ', destinations);
+  
     }, [destinations]);
 
 
@@ -185,7 +185,7 @@ const Destination = () => {
             { plannerID },
             { withCredentials: true }) // 쿠키 포함
             .then((response) => {
-                console.log('response', response);
+    
                 setLikeCount(response.data.likeCount); // 서버에서 업데이트된 좋아요 개수
                 setIsLiked(response.data.isLiked); // 서버에서 반환된 좋아요 상태
             })
@@ -221,22 +221,6 @@ const Destination = () => {
                 window.location.href = "/user/login";
             });
 
-        // axios.post('http://localhost:9000/planner/bringPlanner',
-        //     {
-        //         day: plannerItem.day,
-        //         area: plannerItem.area,
-        //         plannerid: plannerItem.plannerID,
-        //     },
-        //     { 'Content-Type': 'application/json' },
-        // )
-        //     .then((response) => {
-        //         alert(response.data); // 서버에서 보낸 응답 메시지 출력
-                
-        //     })
-        //     .catch((error) => {
-        //         console.error("Error adding to my course:", error);
-        //         alert("내 코스로 저장에 실패했습니다. 다시 시도해주세요.");
-        //     });
     }
 
     const handleDeletePlanner = () => {
@@ -244,7 +228,7 @@ const Destination = () => {
             withCredentials: true, // 쿠키 포함
         })
             .then(response => {
-                console.log("Planner ITEM:", plannerItem);
+
             })
 
             .catch(error => {
@@ -266,28 +250,7 @@ const Destination = () => {
 
     }
 
-    // const handleUpdatePlanner = () => {
-    //     console.log(plannerItem);
-    //     axios.post('http://localhost:9000/planner/updatePlanner',
-    //         {
-    //             plannerid: plannerItem.plannerID,
-    //             title: plannerItem.title,
-    //             areaName: plannerItem.area,
-    //             description: plannerItem.description,
-    //             isPublic: plannerItem.public,
-    //             day: plannerItem.day,
-    //             userid: plannerItem.userId,
-    //             destinations: destinations,
-    //         },
-    //         {'Content-Type': 'application/json'},
-    //     )
-    //     .then(resp=> {
-    //         console.log(resp)
-    //     })
-    //     .catch(err=>{
-    //         console.log(resp)
-    //     })
-    // }
+
 
     const handleUpdatePlanner = () => {
         const updateData = {

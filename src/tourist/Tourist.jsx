@@ -65,7 +65,7 @@ const Tourist = () => {
             withCredentials: true,
         })
             .then((response) => {
-                console.log('response : ', response);
+          
                 setTouristData(response.data.items.item || []); // 빈 배열로 안전하게 설정
                 setTotalCount(Number(response.data.totalCount));  // totalCount를 숫자로 설정
                 setLoading(false); // 로딩 상태 false로 설정

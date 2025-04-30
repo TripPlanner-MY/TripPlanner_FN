@@ -48,7 +48,6 @@ const TouristInfo = () => {
                 if (contentId) {
                     // 관광지 기본 정보 가져오기
                     const response = await axios.get(`https://www.tripplannerbn.shop/tourist-info?contentId=${contentId}`);
-                    console.log('response : ', response);
                     setDetail(response.data.items.item[0]);
 
                     const detailData = response.data.items.item[0];

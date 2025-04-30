@@ -111,7 +111,7 @@ const Join = () => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     
-        console.log(`Field Name: ${name}, Field Value: ${value}`);
+     
     
         if (name === "email") {
             const { message, color } = checkEmail(value);

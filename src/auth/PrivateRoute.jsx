@@ -18,9 +18,9 @@ const PrivateRoute = ({ element, ...rest }) => {
                 );
                 setIsAuthenticated(true);
                 setCookie(response.data); //쿠키정보 저장
-                console.log("쿠키정보 :" ,response.data);
+           
             }catch (err) {
-                console.log("엑세스 토큰 갱신 시도");
+      
                 await handleTokenRefresh();
             }
         };
@@ -36,7 +36,7 @@ const PrivateRoute = ({ element, ...rest }) => {
 
             try{
                 const tokens = await refreshAccessToken(userid);
-                console.log("토큰 갱신 성공", tokens);
+    
 
                 //갱신 후 쿠키 유효성 재검사
                 const retryResponse = await axios.post(
@@ -46,7 +46,7 @@ const PrivateRoute = ({ element, ...rest }) => {
                 );
                 setIsAuthenticated(true);
                 setCookie(retryResponse.data);
-                console.log("갱신 후 쿠키 정보:", retryResponse.data);
+       
             } catch( refreshError) {
                 console.error("토큰 갱신 실패:", refreshError);
                 setIsAuthenticated(false);
@@ -80,7 +80,6 @@ const refreshAccessToken = async (userid) => {
     }catch (error) {
 
 
-        console.log("엑세스 토큰 재발급 실패", error);
         localStorage.removeItem("userid");
         throw new Error("엑세스 토큰 재발급 실패");
     }

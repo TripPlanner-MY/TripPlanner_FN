@@ -22,7 +22,7 @@ const Header = () => {
                 { withCredentials: true }
             )
             .then((response) => {
-                console.log("쿠키 확인:", response.data);
+   
                 // 쿠키가 유효하면 로그인 상태로 설정
                 setIsLogin(true);
             })

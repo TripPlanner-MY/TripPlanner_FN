@@ -19,22 +19,22 @@ const LoginForm = () => {
   };
 
   const naverLogin = () => {
-    console.log("네이버 로그인 클릭");
+
     window.location.href = "https://www.tripplannerbn.shop/oauth2/authorization/naver";
   };
 
   const kakaoLogin = () => {
-    console.log("카카오 로그인 클릭");
+
     window.location.href = " https://www.tripplannerbn.shop/oauth2/authorization/kakao ";
   }
 
   const googleLogin = () => {
-    console.log("구글 로그인");
+
     window.location.href = " https://www.tripplannerbn.shop/oauth2/authorization/google "
   }
 
   const instaLogin = () => {
-    console.log("인스타 로그인");
+
     window.location.href = " https://www.tripplannerbn.shop/oauth2/authorization/instagram "
   }
 
@@ -42,7 +42,7 @@ const LoginForm = () => {
   //로그인 요청
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+  
     setError(null); //이전 에러 초기화
     try {
       const response = await axios.post(
@@ -55,14 +55,14 @@ const LoginForm = () => {
           withCredentials: true, //쿠키 저장
         }
       );
-      console.log("로그인 성공:", response.data);
+
       localStorage.setItem("userid",formData.userid); //로컬 스토리지에 userid 저장
       //로그인 성공 시 처리
       alert("로그인 성공 !");
       window.location.href = "/";
 
     } catch (err) {
-      console.log("로그인 실패,", err);
+
       setError("로그인에 실패했습니다. 다시 시도해주세요");
     }
   };

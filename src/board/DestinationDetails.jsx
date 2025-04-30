@@ -65,7 +65,8 @@ const Details = ({ plannerItem, destinations, activeTab }) => {  // activeTab �
 
             }
 
-            console.log(response.data.items.item[0]);
+      
+            
         }).catch(() => {
             // 데이터가 없으면 카카오지도에 장소 이름으로 검색
             const kakaoMapUrl = `https://map.kakao.com/link/search/${encodeURIComponent(item.name)}`;

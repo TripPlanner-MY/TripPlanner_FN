@@ -52,12 +52,12 @@ const Mypage = () => {
           {},
           { withCredentials: true }
         );
-        console.log("쿠키 유효성 검증 완료:", validateResponse.data);
+
 
         const userResponse = await axios.get("https://www.tripplannerbn.shop/user/mypage", {
           withCredentials: true,
         });
-        console.log("사용자 데이터:", userResponse.data);
+ 
 
         setUserData(userResponse.data);
         setFormData({
@@ -206,7 +206,7 @@ const Mypage = () => {
         },
         { withCredentials: true }
       );
-      console.log("유저 정보가 성공적으로 변경되었습니다.");
+
       alert("유저 정보가 성공적으로 변경되었습니다.");
       setIsEditing(false);
     } catch (err) {
